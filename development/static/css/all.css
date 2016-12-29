@@ -1,0 +1,15 @@
+@font-face{
+    font-family:'MyriadBold';
+    src:url('<?php echo $this->url('/static/fonts/myriadwebpro/myriadwebpro-bold-webfont.eot'); ?>');
+    src:url('<?php echo $this->url('/static/fonts/myriadwebpro/myriadwebpro-bold-webfont.eot'); ?>?#iefix') format('embedded-opentype'),
+        url('<?php echo $this->url('/static/fonts/myriadwebpro/myriadwebpro-bold-webfont.woff'); ?>') format('woff'),
+        url('<?php echo $this->url('/static/fonts/myriadwebpro/myriadwebpro-bold-webfont.ttf'); ?>') format('truetype'),
+        url('<?php echo $this->url('/static/fonts/myriadwebpro/myriadwebpro-bold-webfont.svg'); ?>#MyriadBold') format('svg');
+    font-weight:bold;
+    font-style:normal;
+}
+
+html,body{margin:0;font-family:Arial,Helvetica,sans-serif;line-height:1.5em;font-size:14px;background:#999;}
+.clear{clear:both;}
+.master-container{background:#fff;width:400px;padding:1px;margin:50px auto;border-radius:3px;box-shadow:0 0 15px rgba(0,0,0,0.6);}
+.master-container h1{margin:25px;font-family:'MyriadBold'}
