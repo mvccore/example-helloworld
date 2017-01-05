@@ -8,11 +8,13 @@ class App_Controllers_Base extends MvcCore_Controller
 		parent::PreDispatch();
 		if (!$this->ajax && $this->request->params['controller'] !== 'assets') {
 			App_Views_Helpers_Assets::SetGlobalOptions(array(
-				'cssMinify'	=> 1,
-				'cssJoin'	=> 1,
-				'jsMinify'	=> 1,
-				'jsJoin'	=> 1,
-				'tmpDir'	=> self::$tmpPath,
+				'cssMinify'		=> 1,
+				'cssJoin'		=> 1,
+				'jsMinify'		=> 1,
+				'jsJoin'		=> 1,
+				'tmpDir'		=> self::$tmpPath,
+				// for PHAR packing - uncomment line bellow to "md5_file"
+				//'fileChecking'	=> 'md5_file',
 			));
 			$this->view->Css('fixedHead')
 				->AppendRendered(self::$staticPath . 'css/all.css');
