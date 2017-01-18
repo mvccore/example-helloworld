@@ -1,7 +1,9 @@
 <?php
 
-	@include_once('/Libs/startup.php');
+	@include_once('vendor/autoload.php');
 
-	Nette_DebugAdapter::Init(MvcCore::GetEnvironment() == 'development');
-	
-	MvcCore::Run(1);
+	$app = MvcCore::GetInstance();
+
+	App_Bootstrap::Init();
+
+	$app->Run(1);
