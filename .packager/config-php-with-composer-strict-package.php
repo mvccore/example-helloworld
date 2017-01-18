@@ -3,8 +3,6 @@
 $config = array(
 	'sourcesDir'				=> __DIR__ . '/../development',
 	'releaseFile'				=> __DIR__ . '/../release/index.php',
-	// this simple example is possible to compile without autoloading order automatic detection
-	'autoloadingOrderDetection'	=> FALSE,
 	// do not include script or file, where it's relative path from sourceDir match any of these rules:
 	'excludePatterns'			=> array(
 		

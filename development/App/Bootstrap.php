@@ -10,8 +10,8 @@ class App_Bootstrap
 		MvcCore_View::AddHelpersClassBases('MvcCoreExt_ViewHelpers');
 
 		// setup homepage route
-		MvcCore_Router::GetInstance()->AddRoute(
+		MvcCore_Router::GetInstance(array(
 			new MvcCore_Route('home', 'Default', 'Home', "#^/$#")
-		);
+		));
 	}
 }
