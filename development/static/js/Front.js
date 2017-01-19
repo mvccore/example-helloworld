@@ -7,5 +7,11 @@ Class.Define('Front',{
 	}
 });
 
+if (!console) {
+	var console = {
+		log: function () { }
+	}
+}
+
 // run all declared javascripts after <body>, after all elements are declared
 window.front = new Front();

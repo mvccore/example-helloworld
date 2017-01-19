@@ -11,7 +11,19 @@
 
 html,body{margin:0;font-family:Arial,Helvetica,sans-serif;line-height:1.5em;font-size:14px;background:#999;}
 .clear{clear:both;}
-.master-container{background:#fff;width:400px;padding:1px;margin:50px auto;border-radius:3px;box-shadow:0 0 15px rgba(0,0,0,0.6);}
-.master-container .content{padding:25px;}
-.content h1{font-family:'MyriadBold';margin-top:5px;}
+.master-container{position:relative;width:600px;padding:1px;margin:50px auto;text-align:justify;
+-moz-box-shadow:0 0 15px rgba(0,0,0,0.6);-webkit-box-shadow:0 0 15px rgba(0,0,0,0.6);-o-box-shadow:0 0 15px rgba(0,0,0,0.6);
+-ms-box-shadow:0 0 15px rgba(0,0,0,0.6);-khtml-box-shadow:0 0 15px rgba(0,0,0,0.6);box-shadow:0 0 15px rgba(0,0,0,0.6);
+-moz-border-radius:4px;-webkit-border-radius:4px;-o-border-radius:4px;-ms-border-radius:4px;-khtml-border-radius:4px;
+border-radius:4px;}
+.filters .content-shadow{position:static;margin:-10px 0 0 -10px;padding:10px 0 0 10px;background:#000000;zoom:1;
+filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius=5,MakeShadow=true,ShadowOpacity=0.5);}
+.content{position:relative;background:#ffffff;padding:25px;}
+.content h1{line-height:1.5em;font-family:'MyriadBold';font-size:32px;margin-top:5px;padding-left:50px;
+background:url('<?php echo $this->AssetUrl('/static/img/mvccore-logo.png'); ?>') 0 0.15em no-repeat;}
+.content h2{line-height:1.5em;font-family:'MyriadBold';font-size:24px;margin-bottom:0;}
 .content *:last-child{margin-bottom:0;}
+.content ol li{margin:10px 0;}
+.content code{padding:2px;background:#eee;}
+
+.filters{}

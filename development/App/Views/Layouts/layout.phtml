@@ -14,11 +14,17 @@
 		<!--[if lt IE 9]><div class="filters"><![endif]-->
 		<!--[if (gt IE 8)|!(IE)]><!--><div class="no-filters">
 			<!--<![endif]-->
+
 			<div class="master-container">
-				<div class="content">
-					<?php echo $this->GetContent(); ?>
+                <div class="content-shadow">
+                    <div class="content">
+
+						<?php echo $this->GetContent(); ?>
+
+					</div>
 				</div>
 			</div>
+
 		</div>
 	</body>
 	<?php echo $this->Js('varFoot')->Render(); ?>

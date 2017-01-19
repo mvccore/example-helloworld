@@ -2,12 +2,12 @@
 
 <h1><?php echo $this->Title; ?></h1>
 
-<p>You are running MvcCore framework basic example.</p>
+<p>You are running MvcCore framework basic example how to build your MVC app.</p>
 
-<p>MvcCore version: <b>&quot;<?php echo $this->Version; ?>&quot;</b></p>
+<p>MvcCore version: <code><b>&quot;<?php echo $this->Version; ?>&quot;</b></code></p>
 
 <p>
-	Compile mode: <b>&quot;<?php echo $this->CompileMode; ?>&quot;</b><br />
+	Compile mode: <code><b>&quot;<?php echo $this->CompileMode; ?>&quot;</b></code><br />
     <?php if ($this->CompileMode == ''): ?>
 		<small><i>Mode is empty string - you are in development environment.</i></small>
     <?php elseif ($this->CompileMode == 'SFU'): ?>
