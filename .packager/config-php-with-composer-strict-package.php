@@ -21,7 +21,7 @@ $config = array(
 		"^/vendor/tracy/.*",						// tracy library (https://tracy.nette.org/)
 		"^/vendor/mvccore/ext-tracy.*",				// mvccore tracy adapter and all tracy panel extensions
 		"^/vendor/nette/safe-stream.*",				// nette safe stream used to complete assets in cache
-		"^/vendor/mrclay/.*",							// HTML/JS/CSS minify library
+		"^/vendor/mrclay/.*",						// HTML/JS/CSS minify library
 
 		// Exclude source css and js files, use only what is generated in '/Var/Tmp' dir
 		"^/static/js",

@@ -2,7 +2,7 @@
 
 class App_Controllers_Default extends App_Controllers_Base
 {
-    public function HomeAction () {
+    public function DefaultAction () {
 		$this->view->Title = "MvcCore Hello World Example";
 		$this->view->Version = MvcCore::VERSION;
 		$this->view->CompileMode =  MvcCore::GetInstance()->GetCompiled();

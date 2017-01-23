@@ -1,5 +1,14 @@
 <?php
 
+// If you want to use this config, you need to copy manualy everything 'from' => 'to':
+// - '/development/static/fonts'		=> '/release/static/fonts'
+// - '/development/static/img'			=> '/release/static/img'
+// - '/development/Var/Tmp'				=> '/release/Var/Tmp'
+// - '/development/App/Views/Layouts'	=> '/release/App/Views/Layouts'
+// - '/development/App/Views/Scripts'	=> '/release/App/Views/Scripts'
+// and you need to uncomment line 12 in Bootstrap.php
+// before compilation to generate css/js files properly in tmp
+
 $config = array(
 	'sourcesDir'				=> __DIR__ . '/../development',
 	'releaseFile'				=> __DIR__ . '/../release/index.php',
@@ -21,7 +30,7 @@ $config = array(
 		"^/vendor/tracy/.*",						// tracy library (https://tracy.nette.org/)
 		"^/vendor/mvccore/ext-tracy.*",				// mvccore tracy adapter and all tracy panel extensions
 		"^/vendor/nette/safe-stream.*",				// nette safe stream used to complete assets in cache
-		"^/vendor/mrclay/.*",							// HTML/JS/CSS minify library
+		"^/vendor/mrclay/.*",						// HTML/JS/CSS minify library
 
 		// Exclude everything from '/static/...' and '/Var/Tmp' directory:
 		// If you want to use this config, you need to copy manualy everything 'from' => 'to':
