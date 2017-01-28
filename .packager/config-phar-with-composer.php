@@ -6,7 +6,7 @@ $config = array(
 	// do not include script or file, where it's relative path from sourceDir match any of these rules:
 	'excludePatterns'		=> array(
 		
-		// Common excludes for every MvcCore app using composer:
+		// Common excludes for every \MvcCore app using composer:
 		"/\.",											// Everything started with '.' (.git, .htaccess ...)
 		"^/web\.config",								// Microsoft IIS .rewrite rules
 		"^/Var/Logs/.*",								// App development logs
@@ -19,8 +19,8 @@ $config = array(
 		"^/vendor/tracy/.*",							// - tracy library (https://tracy.nette.org/)
 		"^/vendor/tracy/tracy/(.*)/assets/",			//   excluded everything except staticly
 		"^/vendor/tracy/tracy/tools/",					//   loaded PHP scripts by composer - added later
-		"^/vendor/mvccore/ext-tracy.*",					// - mvccore tracy adapter and all tracy panel extensions
-		"^/vendor/mrclay/.*",							// HTML/JS/CSS minify library
+		"^/vendor/mvccore/ext-debug-tracy.*",			// - mvccore tracy adapter and all tracy panel extensions
+		"^/vendor/mrclay/.*",							// - HTML/JS/CSS minify library
 
 		// Exclude source css and js files, use only what is generated in '/Var/Tmp' dir
 		"^/static/js",
@@ -37,10 +37,10 @@ $config = array(
 	// process simple strings replacements on all readed PHP scripts before saving into result package:
 	// (replacements are executed before configured minification in RAM, they don't affect anythin on hard drive)
 	'stringReplacements'	=> array(
-		// Switch MvcCore application back from SFU mode to automatic compile mode detection
+		// Switch \MvcCore application back from SFU mode to automatic compile mode detection
 		'$app->Run(1);'		=> '$app->Run();',
-		// Remove tracy debug library extension usage (optional):
-		"MvcCore::GetInstance()->SetDebugClass(MvcCoreExt_Tracy::class);"	=> "",
+		// Remove tracy debug library:
+		'class_exists(\'\MvcCore\Ext\Debug\Tracy\')'	=> 'FALSE',
 	),
 	'minifyTemplates'		=> 1,// Remove non-conditional comments and whitespaces
 	'minifyPhp'				=> 1,// Remove comments and whitespaces

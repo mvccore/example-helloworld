@@ -1,12 +1,14 @@
 <?php
 
-class App_Controllers_Base extends MvcCore_Controller
+namespace App\Controllers;
+
+class Base extends \MvcCore\Controller
 {
 	public function PreDispatch () {
 		parent::PreDispatch();
 		if (!$this->ajax) {
 
-			MvcCoreExt_ViewHelpers_Assets::SetGlobalOptions(array(
+			\MvcCore\Ext\View\Helpers\Assets::SetGlobalOptions(array(
 				'cssMinify'		=> 1,
 				'cssJoin'		=> 1,
 				'jsMinify'		=> 1,
