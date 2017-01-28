@@ -1,11 +1,11 @@
-# \MvcCore - Example - Hello World
+# MvcCore - Example - Hello World
 
-[![Latest Stable Version](https://img.shields.io/badge/Stable-v3.1.2-brightgreen.svg?style=plastic)](https://github.com/mvccore/example-helloworld/releases)
+[![Latest Stable Version](https://img.shields.io/badge/Stable-v4.0.0-brightgreen.svg?style=plastic)](https://github.com/mvccore/example-helloworld/releases)
 [![License](https://img.shields.io/badge/Licence-BSD-brightgreen.svg?style=plastic)](https://github.com/mvccore/example-helloworld/blob/master/LICENCE.md)
 [![Packager Build](https://img.shields.io/badge/Packager%20Build-passing-brightgreen.svg?style=plastic)](https://github.com/mvccore/packager)
 ![PHP Version](https://img.shields.io/badge/PHP->=5.3-brightgreen.svg?style=plastic)
 
-- [**\MvcCore**](https://github.com/mvccore/mvccore) very basic application and packaging demonstration.
+- [**MvcCore**](https://github.com/mvccore/mvccore) very basic application and packaging demonstration.
 - **Result** is **completly portable** - `./release/index.php`
 - Result application **currently packed in strict package mode**, all packing configurations included in `./.packager/`
 - Packed with [**Packager library - mvccore/packager**](https://github.com/mvccore/packager)), all packing ways possible:
