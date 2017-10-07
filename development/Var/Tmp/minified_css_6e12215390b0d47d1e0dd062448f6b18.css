@@ -1,0 +1,13 @@
+
+/* /static/css/all.css */
+@font-face{font-family:'MyriadBold';src:url('?controller=controller&action=asset&path=/static/fonts/myriadwebpro/myriadwebpro-bold-webfont.eot');src:url('?controller=controller&action=asset&path=/static/fonts/myriadwebpro/myriadwebpro-bold-webfont.eot?#iefix') format('embedded-opentype'),
+url('?controller=controller&action=asset&path=/static/fonts/myriadwebpro/myriadwebpro-bold-webfont.woff') format('woff'),
+url('?controller=controller&action=asset&path=/static/fonts/myriadwebpro/myriadwebpro-bold-webfont.ttf') format('truetype'),
+url('?controller=controller&action=asset&path=/static/fonts/myriadwebpro/myriadwebpro-bold-webfont.svg#MyriadBold') format('svg');font-weight:bold;font-style:normal}html,body{margin:0;font-family:Arial,Helvetica,sans-serif;line-height:1.5em;font-size:14px;background:#999}.clear{clear:both}.master-container{position:relative;width:600px;padding:1px;margin:50px
+auto;text-align:justify;-moz-box-shadow:0 0 15px rgba(0,0,0,0.6);-webkit-box-shadow:0 0 15px rgba(0,0,0,0.6);-o-box-shadow:0 0 15px rgba(0,0,0,0.6);-ms-box-shadow:0 0 15px rgba(0,0,0,0.6);-khtml-box-shadow:0 0 15px rgba(0,0,0,0.6);box-shadow:0 0 15px rgba(0,0,0,0.6);-moz-border-radius:4px;-webkit-border-radius:4px;-o-border-radius:4px;-ms-border-radius:4px;-khtml-border-radius:4px;border-radius:4px}.filters .content-shadow{position:static;margin:-10px 0 0 -10px;padding:10px
+0 0 10px;background:#000;zoom:1;filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius=5,MakeShadow=true,ShadowOpacity=0.5)}.content{position:relative;background:#fff;padding:25px}.content
+h1{line-height:1.5em;font-family:'MyriadBold';font-size:32px;margin-top:5px;padding-left:50px;background:url('?controller=controller&action=asset&path=/static/img/mvccore-logo.png') 0 0.15em no-repeat}.content
+h2{line-height:1.5em;font-family:'MyriadBold';font-size:24px;margin-bottom:0}.content *:last-child{margin-bottom:0}.content ol
+li{margin:10px
+0}.content
+code{padding:2px;background:#eee}.filters{}
