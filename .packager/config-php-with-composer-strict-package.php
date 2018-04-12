@@ -12,7 +12,7 @@ $config = array(
 		"^/Var/Logs/.*",							// App development logs
 		"composer\.(json|lock)",					// composer.json and composer.lock
 		"LICEN(C|S)E\.(txt|TXT|md|MD)",				// libraries licence files
-		"\.(bak|BAK`bat|BAT|md|MD|phpt|PHPT)$",
+		"\.(bak|BAK|bat|BAT|md|MD|phpt|PHPT|phpproj|PHPPROJ)$",
 		
 		// Exclude specific PHP libraries
 		"^/vendor/composer/.*",						// composer itself
@@ -35,7 +35,7 @@ $config = array(
 	// (replacements are executed before configured minification in RAM, they don't affect anythin on hard drive)
 	'stringReplacements'	=> array(
 		// Switch \MvcCore application back from SFU mode to automatic compile mode detection
-		'$app->Run(1);'		=> '$app->Run();',
+		'->Run(1);'		=> '->Run();',
 	),
 	'minifyTemplates'		=> 1,// Remove non-conditional comments and whitespaces
 	'minifyPhp'				=> 1,// Remove comments and whitespaces
