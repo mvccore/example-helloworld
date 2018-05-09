@@ -55,3 +55,6 @@ Temporary Items
 composer.lock
 vendor/*
 development/vendor/*
+development/Var/Tmp/*
+development/Var/Logs/*
+release/Var/Logs/*
