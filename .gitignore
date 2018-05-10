@@ -58,3 +58,5 @@ development/vendor/*
 development/Var/Tmp/*
 development/Var/Logs/*
 release/Var/Logs/*
+/development/composer-update-dev.cmd
+/development/composer-update.cmd
