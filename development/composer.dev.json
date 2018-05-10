@@ -21,10 +21,10 @@
 		"packagist.org": false
 	},{
 		"type": "vcs",
-		"url": "../../packages/mvccore/mvccore"
+		"url": "../../../packages/mvccore/mvccore"
 	},{
 		"type": "vcs",
-		"url": "../../packages/mvccore/ext-view-helper-assets"
+		"url": "../../../packages/mvccore/ext-view-helper-assets"
 	}],
 	"require": {
 		"php": ">=5.4.0",

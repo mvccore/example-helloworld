@@ -21,17 +21,18 @@
 		"packagist.org": false
 	},{
 		"type": "vcs",
-		"url": "../../packages/mvccore/mvccore"
+		"url": "../../packages/mvccore/packager"
 	},{
-		"type": "vcs",
+		"type": "path",
 		"url": "../../packages/mrclay/minify"
 	}],
 	"require": {
 		"php": ">=5.4.0"
 	},
 	"require-dev": {
-		"mrclay/minify": "2.*",
+		"mrclay/minify": "@dev",
 		"mvccore/packager": "@dev"
 	},
-	"minimum-stability": "dev"
+	"minimum-stability": "dev",
+	"prefer-stable": false
 }
