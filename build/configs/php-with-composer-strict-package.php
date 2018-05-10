@@ -1,17 +1,8 @@
 <?php
 
-// If you want to use this config, you need to copy manualy everything 'from' => 'to':
-// - '/development/static/fonts'		=> '/release/static/fonts'
-// - '/development/static/img'			=> '/release/static/img'
-// - '/development/Var/Tmp'				=> '/release/Var/Tmp'
-// - '/development/App/Views/Layouts'	=> '/release/App/Views/Layouts'
-// - '/development/App/Views/Scripts'	=> '/release/App/Views/Scripts'
-// and you need to uncomment line 17 in Bootstrap.php
-// before compilation to generate css/js files properly in tmp
-
 $config = array(
-	'sourcesDir'				=> __DIR__ . '/../development',
-	'releaseFile'				=> __DIR__ . '/../release/index.php',
+	'sourcesDir'				=> __DIR__ . '/../../development',
+	'releaseFile'				=> __DIR__ . '/../../release/index.php',
 	// do not include script or file, where it's relative path from sourceDir match any of these rules:
 	'excludePatterns'			=> array(
 
@@ -19,9 +10,9 @@ $config = array(
 		"#/\.#",										// Everything started with '.' (.git, .htaccess ...)
 		"#^/web\.config#",								// Microsoft IIS .rewrite rules
 		"#^/Var/Logs/.*#",								// App development logs
-		"#composer\.(json|lock)#",						// composer.json and composer.lock
+		"#composer(.*)(json|lock)#",					// composer.json, composer.lock, composer.dev.json and  composer.dev.lock
 		"#LICEN(C|S)E\.(txt|TXT|md|MD)#",				// libraries licence files
-		"#\.(bak|bat|md|phpt|phpproj)$#",
+		"#\.(bak|bat|cmd|sh|md|phpt|phpproj|phpproj.user)$#",
 
 		// Exclude specific PHP libraries
 		"#^/vendor/composer/.*#",						// composer itself
@@ -32,15 +23,9 @@ $config = array(
 		"#^/vendor/nette/safe-stream.*#",				// nette safe stream used to complete assets in cache
 		"#^/vendor/mrclay/.*#",							// HTML/JS/CSS minify library
 
-		// Exclude everything from '/static/...' and '/Var/Tmp' directory:
-		// If you want to use this config, you need to copy manualy everything 'from' => 'to':
-		// - '/development/static/fonts'	=> '/release/static/fonts'
-		// - '/development/static/img'		=> '/release/static/img'
-		// - '/development/Var/Tmp'			=> '/release/Var/Tmp'
-		"#^/static/.*#",
-		"#^/Var/Tmp/.*#",
-		"#^/App/Views/Layouts/.*#",
-		"#^/App/Views/Scripts/.*#",
+		// Exclude source css and js files, use only what is generated in '/Var/Tmp' dir
+		"#^/static/js#",
+		"#^/static/css#",
 	),
 	// include all scripts or files, where it's relative path from sourceDir match any of these rules:
 	// (include paterns always overides exclude patterns)
@@ -49,7 +34,7 @@ $config = array(
 	// (replacements are executed before configured minification in RAM, they don't affect anythin on hard drive)
 	'stringReplacements'	=> array(
 		// Switch \MvcCore application back from SFU mode to automatic compile mode detection
-		'$app->Run(1);'		=> '$app->Run();',
+		'->Run(1);'		=> '->Run();',
 		// Remove tracy debug library:
 		'class_exists(\'\MvcCore\Ext\Debug\Tracy\')'	=> 'FALSE',
 	),

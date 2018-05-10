@@ -8,8 +8,8 @@
 // before compilation to generate css/js files properly in tmp
 
 $config = array(
-	'sourcesDir'				=> __DIR__ . '/../development',
-	'releaseFile'				=> __DIR__ . '/../release/index.php',
+	'sourcesDir'				=> __DIR__ . '/../../development',
+	'releaseFile'				=> __DIR__ . '/../../release/index.php',
 	// do not include script or file, where it's relative path from sourceDir match any of these rules:
 	'excludePatterns'			=> array(
 
@@ -19,7 +19,7 @@ $config = array(
 		"#^/Var/Logs/.*#",								// App development logs
 		"#composer\.(json|lock)#",						// composer.json and composer.lock
 		"#LICEN(C|S)E\.(txt|TXT|md|MD)#",				// libraries licence files
-		"#\.(bak|bat|md|phpt|phpproj)$#",
+		"#\.(bak|bat|md|phpt|phpproj|phpproj.user)$#",
 
 		// Exclude specific PHP libraries
 		"#^/vendor/composer/.*#",						// composer itself
@@ -45,7 +45,7 @@ $config = array(
 	// (replacements are executed before configured minification in RAM, they don't affect anythin on hard drive)
 	'stringReplacements'	=> array(
 		// Switch \MvcCore application back from SFU mode to automatic compile mode detection
-		'$app->Run(1);'		=> '$app->Run();',
+		'->Run(1);'		=> '->Run();',
 		// Remove tracy debug library:
 		'class_exists(\'\MvcCore\Ext\Debug\Tracy\')'	=> 'FALSE',
 	),
