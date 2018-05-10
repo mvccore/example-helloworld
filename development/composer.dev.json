@@ -17,10 +17,19 @@
 		"name": "Tom Flidr",
 		"homepage": "https://github.com/tomFlidr"
 	}],
+	"repositories": [{
+		"packagist.org": false
+	},{
+		"type": "vcs",
+		"url": "../../packages/mvccore/mvccore"
+	},{
+		"type": "vcs",
+		"url": "../../packages/mvccore/ext-view-helper-assets"
+	}],
 	"require": {
-		"php": ">=5.3.0",
-		"mvccore/mvccore": "^4.3.1",
-		"mvccore/ext-view-helper-assets": "^4.3.1"
+		"php": ">=5.4.0",
+		"mvccore/mvccore": "@dev",
+		"mvccore/ext-view-helper-assets": "@dev"
 	},
-	"minimum-stability": "stable"
+	"minimum-stability": "dev"
 }
