@@ -17,6 +17,7 @@ class Base extends \MvcCore\Controller
 
 			$static = self::$staticPath;
 			$this->view->Css('fixedHead')
+				->Append($static . '/css/old-browsers-warning.css')
 				->AppendRendered($static . '/css/all.css');
 			$this->view->Js('fixedHead')
 				->Append($static . '/js/libs/class.min.js')
