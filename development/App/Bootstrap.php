@@ -20,8 +20,8 @@ class Bootstrap
 		//\MvcCore\Ext\Views\Helpers\Assets::SetAssetUrlCompletion(FALSE);
 
 		// setup homepage route (optional, everything in '/' is routed to 'Index:Index' by default)
-		$app->GetRouter()->SetRoutes(array(
+		$app->GetRouter()->SetRoutes([
 			'home' => "/"
-		));
+		]);
 	}
 }
