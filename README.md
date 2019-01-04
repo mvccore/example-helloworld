@@ -7,8 +7,8 @@
 
 [**MvcCore**](https://github.com/mvccore/mvccore) very basic application example.  
 
-This example is not a single file project application. If you want to see how to build a single file application  
-with this example, follow steps on portable hello world project here: [`mvccore/example-helloworld-portable`](https://github.com/mvccore/example-helloworld-portable)
+This example is not a single file project application. If you want to see how to build a single file application with this example,  
+run this example first to see how it works and then follow steps on portable hello world project here: [`mvccore/example-helloworld-portable`](https://github.com/mvccore/example-helloworld-portable)
 
 ## Instalation
 ```shell
