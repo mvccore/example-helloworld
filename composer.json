@@ -1,16 +1,11 @@
 {
 	"name": "mvccore/example-helloworld",
-	"type": "application",
-	"description": "MvcCore Example - Hello World - demonstration how to write very simple MVC app with packing into single PHP result file.",
+	"type": "project",
+	"description": "MvcCore Example - Hello World - very simple application with possibility to pack into single PHP result file.",
 	"keywords": [
 		"mvccore", 
-		"framework", 
-		"mvc", 
-		"simple mvc", 
-		"super fast mvc", 
-		"easy mvc", 
-		"single file application", 
-		"hello world"
+		"example", 
+		"hello-world"
 	],
 	"license": ["BSD-3-Clause"],
 	"authors": [{
@@ -18,9 +13,9 @@
 		"homepage": "https://github.com/tomFlidr"
 	}],
 	"require": {
-		"php": ">=5.3.0",
-		"mrclay/minify": "2.3.*",
-		"mvccore/packager": "2.*"
+		"php": ">=5.4.0",
+		"mvccore/mvccore": "^5.0.0",
+		"mvccore/ext-view-helper-assets": "^5.0.0"
 	},
 	"minimum-stability": "stable"
 }
