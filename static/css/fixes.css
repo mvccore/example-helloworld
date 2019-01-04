@@ -1,0 +1,9 @@
+html[data-browser*="MSIE"] .content h2{
+	font-size: 130%;
+}
+html[data-browser*="MSIE"] .content h3{
+	font-size: 105%;
+}
+html[data-browser*="MSIE"] code.shell{
+	font-size: 80%;
+}

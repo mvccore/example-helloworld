@@ -1,0 +1,113 @@
+.content h2 {
+	font-family: 'MyriadBold';
+	font-size: 120%;
+	line-height: 1.4em;
+	margin-bottom: 0;
+}
+.content h3,
+.content h3 a{
+	font-family: 'MyriadBold';
+	font-size: 95%;
+	line-height: 1.4em;
+	margin-bottom: 0;
+}
+.content p {
+	font-size:100%;
+	color: #333;
+	line-height: 1.4em;
+}
+.content a {
+	color: #007ae6;
+	line-height: 1.4em;
+	padding: 2px 2px 0 2px;
+	text-decoration: none;
+	border-bottom: 1px solid #007ae6;
+}
+.content a:hover,
+.content a:focus,
+.content a:active,
+.content a.opened{
+	color: #fff;
+	background: #007ae6;
+}
+.content a:hover code,
+.content a:focus code,
+.content a:active code,
+.content a.opened code{
+	color: #fff;
+}
+.content h3 a:before,
+.content h3 a::before {
+	position: relative;
+	top: -5px;
+	margin-right: 2px;
+	content: '-';
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 5px 0 5px 6px;
+	border-color: transparent transparent transparent #007be6;
+	line-height: 0;
+	font-size: 0;
+}
+.content h3 a.opened:before,
+.content h3 a.opened::before {
+	top: -2px;
+	border-width: 6px 5px 0 5px;
+	border-color: #fff transparent transparent transparent;
+}
+.content h3 a:hover:before,
+.content h3 a:hover::before,
+.content h3 a:focus:before,
+.content h3 a:focus::before,
+.content h3 a:active:before,
+.content h3 a:active::before,
+.content h3 a.opened:hover:before,
+.content h3 a.opened:hover::before,
+.content h3 a.opened:focus:before,
+.content h3 a.opened:focus::before,
+.content h3 a.opened:active:before,
+.content h3 a.opened:active::before {
+	top: -2px;
+	border-width: 6px 5px 0 5px;
+	border-color: #fff transparent transparent transparent;
+}
+.content *:last-child {
+	margin-bottom: 0;
+}
+.content ol {
+	padding-left: 20px;
+}
+.content ol li {
+	font-size: 90%;
+	margin: 10px 0;
+}
+.content code {
+	color: #000;
+	padding: 2px;
+	background: rgba(0,0,0,0.08);
+}
+.content div.clickable-content {
+	padding:1px 10px;
+}
+.content div.clickable-content small{
+	display:block;
+	margin-top:10px;
+	font-size: 90%;
+}
+.content div.clickable-content code.shell {
+	margin:10px 0;
+}
+code.shell {
+	display: block;
+	font-size: 88%;
+	line-height: 1.3em;
+	padding:1px 10px 10px 10px;
+}
+code.shell .comment {
+	margin-top:10px;
+	font-style:italic;
+	color:#999;
+}
+code.shell .command {
+}

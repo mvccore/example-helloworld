@@ -1,0 +1,87 @@
+<?php /** @var $this \MvcCore\View */ ?>
+
+<h1><?php echo $this->Title;?></h1>
+
+<p>You have successfully launched the first very simple example. Cheers!</p>
+
+<p><b>MvcCore</b> framework version: <code><b>&quot;<?php echo $this->Version;?>&quot;</b></code></p>
+
+<p>
+	<b>MvcCore</b> app current compile mode: <code>&quot;<b><?php echo $this->CompileMode;?>&quot;</b></code><br />
+	<?php if($this->CompileMode==''):?>
+		<small><i>Mode is empty string - you are in development environment.</i></small>
+	<?php elseif($this->CompileMode=='SFU'):?>
+		<small><i>Single File Mode - to generate all assets in <code><b>/Var/Tmp</b></code> directory.</i></small>
+	<?php elseif(strpos($this->CompileMode,'PHP')===0):?>
+		<small><i>Application is packed as single PHP file.</i></small>
+	<?php elseif(strpos($this->CompileMode,'PHAR')===0):?>
+		<small><i>Application is packed as standard PHAR archive.</i></small>
+	<?php endif;?>
+</p>
+
+<hr />
+
+<h2>Follow these steps how to create and build single file app:</h2>
+
+<h3>
+	<a class="clickable-link" href="javascript:void(0);">
+		Wrap <code>Hello World</code> example with a portable structure
+	</a>
+</h3>
+<div class="clickable-content hidden">
+	<small>Open command line in localhost directory and run:</small>
+	<code class="shell">
+		<div class="comment"># load new hello world portable project structure</div>
+		<div class="command">composer create-project mvccore/example-helloworld-portable</div>
+
+		<div class="comment"># go to portable project directory</div>
+		<div class="command">cd example-helloworld-portable</div>
+
+		<div class="comment"># load the same hello world project into new ./development dir<br />
+		# (or simply just copy this same project into the new ./development dir)</div>
+		<div class="command">composer create-project mvccore/example-helloworld ./development</div>
+ 
+		<div class="comment"># go to hello world project directory</div>
+		<div class="command">cd ./development</div>
+ 
+		<div class="comment"># update dependencies for hello world development sources</div>
+		<div class="command">composer update</div>
+	</code>
+</div>
+
+<h3>
+	<a class="clickable-link" href="javascript:void(0);">
+		Prepare and run build process
+	</a>
+</h3>
+
+<div class="clickable-content hidden">
+	<ol>
+		<li>Go to <code>example-helloworld-portable/development</code> directory</li>
+		<li>Clear everything in <code>/Var/Tmp</code> directory.</li>
+		<li>
+			Add <code>TRUE</code> param into <code>index.php</code>: <br />
+			<code>\MvcCore\Application::GetInstance()->Run(TRUE);</code><br />
+			to&nbsp;temporary switch application compile <br />mode to&nbsp; <b>SFU</b> (<b>S</b>ingle <b>F</b>ile <b>U</b>rl mode).
+		</li>
+		<li>
+			Visit all application routes where are different CSS or&nbsp;JS assets groups 
+			to&nbsp;complete all possible asset files in&nbsp; <code>/Var/Tmp</code> 
+			directory. Process those requests on&nbsp;addresses with the same or&nbsp;empty 
+			request base path as&nbsp;result application will have.
+		</li>
+		<li>Go to <code>example-helloworld-portable/build</code> directory</li>
+		<li>
+			Run <b><code>./make-php.php</code></b> script in&nbsp;browser 
+			or&nbsp;in&nbsp;CLI to&nbsp;build result application. Do not 
+			include any PHP autoloaders, any unnecessary code you don't 
+			need and do not include any source CSS/JS files which are 
+			not necessary.
+		</li>
+		<li>
+			Visit your application in browser somewhere on <br />
+			<b><code>http://localhost/example-helloworld-portable/release/</code></b><br /> 
+			and enjoy result.
+		</li>
+	</ol>
+</div>
