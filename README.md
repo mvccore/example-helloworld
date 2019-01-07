@@ -12,12 +12,6 @@ run this example first (to see how it works) and then follow steps here on [`mvc
 
 ## Instalation
 ```shell
-# load example
-composer create-project mvccore/example-helloworld
-
-# go to project development dir
-cd example-helloworld/development
-
-# update dependencies for app development sources
-composer update
+# load example into './my-helloworld' (directory is created if doesn't exist)
+composer create-project mvccore/example-helloworld my-helloworld
 ```
