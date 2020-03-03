@@ -28,7 +28,7 @@ class Base extends \MvcCore\Controller
 			$this->view->Js('varFoot')
 				->Append($static . '/js/Front.js');
 
-			$this->view->BasePath = $this->GetRequest()->GetBasePath();
+			$this->view->basePath = $this->GetRequest()->GetBasePath();
 		}
 	}
 }

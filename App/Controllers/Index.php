@@ -2,23 +2,28 @@
 
 namespace App\Controllers;
 
+class Person extends \MvcCore\Model {
+	public string $name;
+}
+
 class Index extends Base
 {
     public function IndexAction(){
-		$this->view->Title = "Hello World!";
-		$this->view->Version = \MvcCore\Application::VERSION;
-		$this->view->CompileMode = $this->application->GetCompiled();
+		$this->view->title = "Hello World!";
+		$this->view->version = \MvcCore\Application::VERSION;
+		$this->view->compileMode = $this->application->GetCompiled();
 	}
 	public function NotFoundAction(){
 		$this->ErrorAction();
 	}
 	public function ErrorAction(){
 		$code = $this->response->GetCode();
-		$message = $this->request->GetParam('message', '\\a-zA-Z0-9_;, /\-\@\:');
+		if ($code === 200) $code = 404;
+		$message = $this->request->GetParam('message', 'a-zA-Z0-9_;, \\/\-\@\:\.');
 		$message = preg_replace('#`([^`]*)`#', '<code>$1</code>', $message);
 		$message = str_replace("\n", '<br />', $message);
-		$this->view->Title = "Error $code";
-		$this->view->Message = $message;
+		$this->view->title = "Error $code";
+		$this->view->message = $message;
 		$this->Render('error');
 	}
 }

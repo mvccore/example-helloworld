@@ -1,20 +1,20 @@
 <?php /** @var $this \MvcCore\View */ ?>
 
-<h1><?php echo $this->Title;?></h1>
+<h1><?=$title?></h1>
 
 <p>You have successfully launched the first very simple example. Cheers!</p>
 
-<p><b>MvcCore</b> framework version: <code><b>&quot;<?php echo $this->Version;?>&quot;</b></code></p>
+<p><b>MvcCore</b> framework version: <code><b>&quot;<?=$version?>&quot;</b></code></p>
 
 <p>
-	<b>MvcCore</b> app current compile mode: <code>&quot;<b><?php echo $this->CompileMode;?>&quot;</b></code><br />
-	<?php if($this->CompileMode==''):?>
+	<b>MvcCore</b> app current compile mode: <code>&quot;<b><?=$compileMode?>&quot;</b></code><br />
+	<?php if ($compileMode == ''): ?>
 		<small><i>Mode is empty string - you are in development environment.</i></small>
-	<?php elseif($this->CompileMode=='SFU'):?>
+	<?php elseif ($compileMode == 'SFU'): ?>
 		<small><i>Single File Mode - to generate all assets in <code><b>/Var/Tmp</b></code> directory.</i></small>
-	<?php elseif(strpos($this->CompileMode,'PHP')===0):?>
+	<?php elseif (strpos($compileMode, 'PHP') === 0): ?>
 		<small><i>Application is packed as single PHP file.</i></small>
-	<?php elseif(strpos($this->CompileMode,'PHAR')===0):?>
+	<?php elseif (strpos($compileMode, 'PHAR') === 0): ?>
 		<small><i>Application is packed as standard PHAR archive.</i></small>
 	<?php endif;?>
 </p>
