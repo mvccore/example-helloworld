@@ -2,10 +2,6 @@
 
 namespace App\Controllers;
 
-class Person extends \MvcCore\Model {
-	public string $name;
-}
-
 class Index extends Base
 {
     public function IndexAction(){
@@ -13,9 +9,11 @@ class Index extends Base
 		$this->view->version = \MvcCore\Application::VERSION;
 		$this->view->compileMode = $this->application->GetCompiled();
 	}
+
 	public function NotFoundAction(){
 		$this->ErrorAction();
 	}
+
 	public function ErrorAction(){
 		$code = $this->response->GetCode();
 		if ($code === 200) $code = 404;
