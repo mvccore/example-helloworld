@@ -8,6 +8,8 @@ class Index extends Base
 		$this->view->title = "Hello World!";
 		$this->view->version = \MvcCore\Application::VERSION;
 		$this->view->compileMode = $this->application->GetCompiled();
+		// try to dump something into build-in debug bar:
+		//x($this->request);
 	}
 
 	public function NotFoundAction(){
