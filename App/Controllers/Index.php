@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 class Index extends Base
 {
-    public function IndexAction(){
+    public function IndexAction () {
 		$this->view->title = "Hello World!";
 		$this->view->version = \MvcCore\Application::VERSION;
 		$this->view->compileMode = $this->application->GetCompiled();
@@ -12,11 +12,11 @@ class Index extends Base
 		//x($this->request);
 	}
 
-	public function NotFoundAction(){
+	public function NotFoundAction () {
 		$this->ErrorAction();
 	}
 
-	public function ErrorAction(){
+	public function ErrorAction () {
 		$code = $this->response->GetCode();
 		if ($code === 200) $code = 404;
 		$message = $this->request->GetParam('message', 'a-zA-Z0-9_;, \\/\-\@\:\.');
