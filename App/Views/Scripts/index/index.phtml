@@ -60,8 +60,8 @@
 		<li>Go to <code>example-helloworld-portable/development</code> directory</li>
 		<li>Clear everything in <code>/Var/Tmp</code> directory.</li>
 		<li>
-			Add <code>TRUE</code> param into <code>index.php</code>: <br />
-			<code>\App\Bootstrap::Init()->Run(TRUE);</code><br />
+			Uncomment this line inside <code>index.php</code>: <br />
+			<code>->SetCompiled(\MvcCore\Application::COMPILED_SFU)</code><br />
 			to&nbsp;temporary switch application compile <br />mode to&nbsp; <b>SFU</b> (<b>S</b>ingle <b>F</b>ile <b>U</b>rl mode).
 		</li>
 		<li>
