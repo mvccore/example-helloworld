@@ -1,7 +1,7 @@
 {
 	"name": "mvccore/example-helloworld",
 	"type": "project",
-	"description": "MvcCore Example - Hello World - very simple application with possibility to pack into single PHP result file.",
+	"description": "MvcCore - Example - Hello World - very simple application with possibility to pack into single PHP result file.",
 	"keywords": [
 		"mvccore", 
 		"example", 
