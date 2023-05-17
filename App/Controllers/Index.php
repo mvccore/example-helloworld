@@ -2,8 +2,12 @@
 
 namespace App\Controllers;
 
-class Index extends Base
-{
+class Index extends Base {
+
+	/**
+	 * Render homepage.
+	 * @return void
+	 */
     public function IndexAction () {
 		$this->view->title = "Hello World!";
 		$this->view->version = \MvcCore\Application::VERSION;
@@ -11,19 +15,24 @@ class Index extends Base
 		// try to dump something into build-in debug bar:
 		//x($this->request);
 	}
-
-	public function NotFoundAction () {
+	
+    /**
+	 * Render not found action.
+	 * @return void
+	 */
+	public function NotFoundAction(){
 		$this->ErrorAction();
 	}
 
+	/**
+	 * Render possible server error action.
+	 * @return void
+	 */
 	public function ErrorAction () {
 		$code = $this->response->GetCode();
 		if ($code === 200) $code = 404;
-		$message = $this->request->GetParam('message', 'a-zA-Z0-9_;, \\/\-\@\:\.');
-		$message = preg_replace('#`([^`]*)`#', '<code>$1</code>', $message);
-		$message = str_replace("\n", '<br />', $message);
-		$this->view->title = "Error $code";
-		$this->view->message = $message;
+		$this->view->title = "Error {$code}";
+		$this->view->message = $this->request->GetParam('message', FALSE);
 		$this->Render('error');
 	}
 }
