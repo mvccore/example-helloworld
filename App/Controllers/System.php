@@ -2,13 +2,17 @@
 
 namespace App\Controllers;
 
-class System extends Base
-{
+class System extends Base {
+
 	public function JsErrorsLogAction () {
 		$this->SetViewEnabled(FALSE);
-		if ($this->environment->IsProduction()) return;
-		$keys = [
-			'message'	=>1,
+		$sysCfg = $this->GetConfigSystem();
+		$jsErrorsLog = isset($sysCfg->debug->jsErrorsLog)
+			? (bool) $sysCfg->debug->jsErrorsLog
+			: FALSE;
+		if (!$jsErrorsLog) return;
+		$keys = array(
+			'message'	=> 1,
 			'uri'		=> 1,
 			'file'		=> 1,
 			'line'		=> 0,
@@ -16,14 +20,14 @@ class System extends Base
 			'callstack'	=> 1,
 			'browser'	=> 1,
 			'platform'	=> 0,
-		];
-		$data = [];
+		);
+		$data = array();
 		foreach ($keys as $key => $hex) {
-			$param = $this->GetParam($key, 'a-zA-Z0-9/\&\(\)\[\]\.\'\"%\#\$');
+			$param = $this->GetParam($key);
 			if ($hex) $param = self::_hexToStr($param);
 			$data[$key] = $param;
 		}
-		$msg = json_encode($data);
+		$msg = \MvcCore\Tool::JsonEncode($data, JSON_PRETTY_PRINT);
 		\MvcCore\Debug::Log($msg, \MvcCore\Debug::JAVASCRIPT);
 	}
 
