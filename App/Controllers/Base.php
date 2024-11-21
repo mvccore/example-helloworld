@@ -9,13 +9,14 @@ class Base extends \MvcCore\Controller
 		if (!$this->ajax) {
 
 			\MvcCore\Ext\Views\Helpers\Assets::SetGlobalOptions([
+				'tmpDir'		=> '~/Var/Tmp',
 				'cssMinify'		=> 1,
 				'cssJoin'		=> 1,
 				'jsMinify'		=> 1,
 				'jsJoin'		=> 1,
 			]);
-
-			$static = self::$staticPath;
+			
+			$static = $this->application->GetPathStatic();
 			$this->view->Css('fixedHead')
 				->Append($static . '/css/old-browsers-warning.css')
 				->AppendRendered($static . '/css/layout.css') // render links to assets defined in PHP 
